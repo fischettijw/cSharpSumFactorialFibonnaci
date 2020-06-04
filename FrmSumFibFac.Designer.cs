@@ -179,8 +179,11 @@
             this.Controls.Add(this.Lbl01);
             this.Controls.Add(this.LblN);
             this.Controls.Add(this.LblSum);
+            this.MaximumSize = new System.Drawing.Size(685, 405);
+            this.MinimumSize = new System.Drawing.Size(685, 405);
             this.Name = "FrmSumFibFac";
-            this.Text = "Form1";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "Common Mathematical Series by Jwf";
             this.ResumeLayout(false);
             this.PerformLayout();
 
