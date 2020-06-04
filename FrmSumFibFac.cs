@@ -20,14 +20,16 @@ namespace cSharpSumFactorialFibonnaci
         private void FrmSumFibFac_Load(object sender, EventArgs e)
         {
             TxtLen.Text = "10";
+            CbxFibonnaci.DropDownStyle = ComboBoxStyle.DropDownList;    // DropDownList makes it ReadOnly
+            this.AcceptButton = BtnCalculate;
             BtnCalculate.PerformClick();
         }
 
         private void BtnCalculate_Click(object sender, EventArgs e)
         {
             TxtSum.Text = SumSeries(int.Parse(TxtLen.Text)).ToString();
-            TxtFactorial.Text = FactorialSeries(int.Parse(TxtLen.Text)).ToString();
             TxtFibonacci.Text = FibonnacciSeries(int.Parse(TxtLen.Text)).ToString();
+            TxtFactorial.Text = FactorialSeries(int.Parse(TxtLen.Text)).ToString("E9");
         }
 
         public int SumSeries(int n)
@@ -46,11 +48,16 @@ namespace cSharpSumFactorialFibonnaci
             Int32 a, b = 1;
             if (n < 3) return 1;
             a = b = 1;
+            CbxFibonnaci.Items.Clear();
+            CbxFibonnaci.Items.Add($"  {"01"}   {"0000000001"}");
+            CbxFibonnaci.Items.Add($"  {"02"}   {"0000000001"}");
             try
             {
                 for (int i = 3; i <= n; i++)
                 {
                     fib = a + b;
+                    if (fib < 0) { fib = -1; break; };
+                    CbxFibonnaci.Items.Add($"  {i.ToString("D2")}   {fib.ToString("D10")}");
                     a = b;
                     b = fib;
                 }
@@ -59,7 +66,6 @@ namespace cSharpSumFactorialFibonnaci
             {
                 fib = -1;
             }
-
             return fib;
         }
 
@@ -80,5 +86,12 @@ namespace cSharpSumFactorialFibonnaci
             return fac;
         }
 
+        private void TxtLen_TextChanged(object sender, EventArgs e)
+        {
+            CbxFibonnaci.Items.Clear();
+            TxtSum.Text = "";
+            TxtFibonacci.Text = "";
+            TxtFactorial.Text = "";
+        }
     }
 }

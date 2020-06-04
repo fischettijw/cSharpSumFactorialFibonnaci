@@ -40,6 +40,7 @@
             this.Lbl01 = new System.Windows.Forms.Label();
             this.LblN = new System.Windows.Forms.Label();
             this.LblSum = new System.Windows.Forms.Label();
+            this.CbxFibonnaci = new System.Windows.Forms.ComboBox();
             this.SuspendLayout();
             // 
             // LblLen
@@ -105,6 +106,7 @@
             this.TxtLen.Size = new System.Drawing.Size(83, 44);
             this.TxtLen.TabIndex = 19;
             this.TxtLen.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.TxtLen.TextChanged += new System.EventHandler(this.TxtLen_TextChanged);
             // 
             // LblFactorial
             // 
@@ -166,11 +168,21 @@
             this.LblSum.TabIndex = 13;
             this.LblSum.Text = "S";
             // 
+            // CbxFibonnaci
+            // 
+            this.CbxFibonnaci.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.CbxFibonnaci.FormattingEnabled = true;
+            this.CbxFibonnaci.Location = new System.Drawing.Point(234, 186);
+            this.CbxFibonnaci.Name = "CbxFibonnaci";
+            this.CbxFibonnaci.Size = new System.Drawing.Size(200, 33);
+            this.CbxFibonnaci.TabIndex = 25;
+            // 
             // FrmSumFibFac
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(669, 366);
+            this.Controls.Add(this.CbxFibonnaci);
             this.Controls.Add(this.LblLen);
             this.Controls.Add(this.TxtFactorial);
             this.Controls.Add(this.TxtFibonacci);
@@ -208,6 +220,7 @@
         internal System.Windows.Forms.Label Lbl01;
         internal System.Windows.Forms.Label LblN;
         internal System.Windows.Forms.Label LblSum;
+        private System.Windows.Forms.ComboBox CbxFibonnaci;
     }
 }
 
