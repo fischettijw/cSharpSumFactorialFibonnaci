@@ -54,32 +54,35 @@
             // 
             // TxtFactorial
             // 
-            this.TxtFactorial.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TxtFactorial.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TxtFactorial.Location = new System.Drawing.Point(457, 225);
             this.TxtFactorial.Name = "TxtFactorial";
             this.TxtFactorial.ReadOnly = true;
-            this.TxtFactorial.Size = new System.Drawing.Size(200, 38);
+            this.TxtFactorial.Size = new System.Drawing.Size(200, 31);
             this.TxtFactorial.TabIndex = 23;
+            this.TxtFactorial.Text = "1234567890123456";
             this.TxtFactorial.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // TxtFibonacci
             // 
-            this.TxtFibonacci.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TxtFibonacci.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TxtFibonacci.Location = new System.Drawing.Point(234, 225);
             this.TxtFibonacci.Name = "TxtFibonacci";
             this.TxtFibonacci.ReadOnly = true;
-            this.TxtFibonacci.Size = new System.Drawing.Size(200, 38);
+            this.TxtFibonacci.Size = new System.Drawing.Size(200, 31);
             this.TxtFibonacci.TabIndex = 22;
+            this.TxtFibonacci.Text = "1234567890123456";
             this.TxtFibonacci.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // TxtSum
             // 
-            this.TxtSum.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TxtSum.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TxtSum.Location = new System.Drawing.Point(11, 225);
             this.TxtSum.Name = "TxtSum";
             this.TxtSum.ReadOnly = true;
-            this.TxtSum.Size = new System.Drawing.Size(200, 38);
+            this.TxtSum.Size = new System.Drawing.Size(200, 31);
             this.TxtSum.TabIndex = 21;
+            this.TxtSum.Text = "1234567890123456";
             this.TxtSum.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // BtnCalculate
@@ -92,6 +95,7 @@
             this.BtnCalculate.TabIndex = 20;
             this.BtnCalculate.Text = "Calculate";
             this.BtnCalculate.UseVisualStyleBackColor = true;
+            this.BtnCalculate.Click += new System.EventHandler(this.BtnCalculate_Click);
             // 
             // TxtLen
             // 
@@ -184,6 +188,7 @@
             this.Name = "FrmSumFibFac";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Common Mathematical Series by Jwf";
+            this.Load += new System.EventHandler(this.FrmSumFibFac_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
