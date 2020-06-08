@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmSumFibFac));
             this.LblLen = new System.Windows.Forms.Label();
             this.TxtFactorial = new System.Windows.Forms.TextBox();
             this.TxtFibonacci = new System.Windows.Forms.TextBox();
@@ -41,6 +42,8 @@
             this.LblN = new System.Windows.Forms.Label();
             this.LblSum = new System.Windows.Forms.Label();
             this.CbxFibonnaci = new System.Windows.Forms.ComboBox();
+            this.TxtPrime = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // LblLen
@@ -90,7 +93,7 @@
             // 
             this.BtnCalculate.Font = new System.Drawing.Font("Microsoft Sans Serif", 26.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BtnCalculate.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.BtnCalculate.Location = new System.Drawing.Point(239, 289);
+            this.BtnCalculate.Location = new System.Drawing.Point(239, 296);
             this.BtnCalculate.Name = "BtnCalculate";
             this.BtnCalculate.Size = new System.Drawing.Size(190, 58);
             this.BtnCalculate.TabIndex = 20;
@@ -101,9 +104,9 @@
             // TxtLen
             // 
             this.TxtLen.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TxtLen.Location = new System.Drawing.Point(293, 38);
+            this.TxtLen.Location = new System.Drawing.Point(263, 38);
             this.TxtLen.Name = "TxtLen";
-            this.TxtLen.Size = new System.Drawing.Size(83, 44);
+            this.TxtLen.Size = new System.Drawing.Size(142, 44);
             this.TxtLen.TabIndex = 19;
             this.TxtLen.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.TxtLen.TextChanged += new System.EventHandler(this.TxtLen_TextChanged);
@@ -172,16 +175,38 @@
             // 
             this.CbxFibonnaci.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.CbxFibonnaci.FormattingEnabled = true;
-            this.CbxFibonnaci.Location = new System.Drawing.Point(234, 186);
+            this.CbxFibonnaci.Location = new System.Drawing.Point(227, 186);
             this.CbxFibonnaci.Name = "CbxFibonnaci";
-            this.CbxFibonnaci.Size = new System.Drawing.Size(200, 33);
+            this.CbxFibonnaci.Size = new System.Drawing.Size(215, 33);
             this.CbxFibonnaci.TabIndex = 25;
+            // 
+            // TxtPrime
+            // 
+            this.TxtPrime.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TxtPrime.Location = new System.Drawing.Point(49, 329);
+            this.TxtPrime.Name = "TxtPrime";
+            this.TxtPrime.ReadOnly = true;
+            this.TxtPrime.Size = new System.Drawing.Size(125, 31);
+            this.TxtPrime.TabIndex = 26;
+            this.TxtPrime.Text = "Prime - ???";
+            this.TxtPrime.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 48F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(75, 264);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(80, 73);
+            this.label1.TabIndex = 27;
+            this.label1.Text = "n\'";
             // 
             // FrmSumFibFac
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(669, 366);
+            this.Controls.Add(this.TxtPrime);
             this.Controls.Add(this.CbxFibonnaci);
             this.Controls.Add(this.LblLen);
             this.Controls.Add(this.TxtFactorial);
@@ -195,6 +220,8 @@
             this.Controls.Add(this.Lbl01);
             this.Controls.Add(this.LblN);
             this.Controls.Add(this.LblSum);
+            this.Controls.Add(this.label1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximumSize = new System.Drawing.Size(685, 405);
             this.MinimumSize = new System.Drawing.Size(685, 405);
             this.Name = "FrmSumFibFac";
@@ -221,6 +248,8 @@
         internal System.Windows.Forms.Label LblN;
         internal System.Windows.Forms.Label LblSum;
         private System.Windows.Forms.ComboBox CbxFibonnaci;
+        internal System.Windows.Forms.TextBox TxtPrime;
+        internal System.Windows.Forms.Label label1;
     }
 }
 

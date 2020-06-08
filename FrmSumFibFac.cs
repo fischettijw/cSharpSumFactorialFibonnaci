@@ -30,6 +30,7 @@ namespace cSharpSumFactorialFibonnaci
             TxtSum.Text = SumSeries(int.Parse(TxtLen.Text)).ToString();
             TxtFibonacci.Text = FibonnacciSeries(int.Parse(TxtLen.Text)).ToString();
             TxtFactorial.Text = FactorialSeries(int.Parse(TxtLen.Text)).ToString("E9");
+            TxtPrime.Text = IsPrime(int.Parse(TxtLen.Text)) ? "Prime YES" : "Prime NO";
         }
 
         public int SumSeries(int n)
@@ -48,16 +49,16 @@ namespace cSharpSumFactorialFibonnaci
             Int32 a, b = 1;
             if (n < 3) return 1;
             a = b = 1;
-            CbxFibonnaci.Items.Clear();
-            CbxFibonnaci.Items.Add($"  {"01"}   {"0000000001"}");
-            CbxFibonnaci.Items.Add($"  {"02"}   {"0000000001"}");
+            //CbxFibonnaci.Items.Clear();
+            //CbxFibonnaci.Items.Add($"  {"01"}   {"0000000001"}");
+            //CbxFibonnaci.Items.Add($"  {"02"}   {"0000000001"}");
             try
             {
                 for (int i = 3; i <= n; i++)
                 {
                     fib = a + b;
+                    //CbxFibonnaci.Items.Add($"  {i.ToString("D2")}   {fib.ToString("D10")}");
                     if (fib < 0) { fib = -1; break; };
-                    CbxFibonnaci.Items.Add($"  {i.ToString("D2")}   {fib.ToString("D10")}");
                     a = b;
                     b = fib;
                 }
@@ -69,9 +70,9 @@ namespace cSharpSumFactorialFibonnaci
             return fib;
         }
 
-        public Double FactorialSeries(int n)
+        public double FactorialSeries(int n)
         {
-            Double fac = 1;
+            double fac = 1;
             try
             {
                 for (int i = 1; i <= n; i++)
@@ -86,12 +87,27 @@ namespace cSharpSumFactorialFibonnaci
             return fac;
         }
 
+        public bool IsPrime(int n)
+        {
+            for (int i = 2; i <= n / 2; i++)
+            {
+                if (n % i == 0)
+                {
+                    return false;
+                }
+            }
+
+            return true;
+        }
+
+
         private void TxtLen_TextChanged(object sender, EventArgs e)
         {
             CbxFibonnaci.Items.Clear();
             TxtSum.Text = "";
             TxtFibonacci.Text = "";
             TxtFactorial.Text = "";
+            TxtPrime.Text = "";
         }
     }
 }
