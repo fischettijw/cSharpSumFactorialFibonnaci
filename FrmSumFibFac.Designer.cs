@@ -110,6 +110,7 @@
             this.TxtLen.TabIndex = 19;
             this.TxtLen.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.TxtLen.TextChanged += new System.EventHandler(this.TxtLen_TextChanged);
+            this.TxtLen.DoubleClick += new System.EventHandler(this.TxtLen_DoubleClick);
             // 
             // LblFactorial
             // 

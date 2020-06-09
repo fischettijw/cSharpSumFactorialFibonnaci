@@ -89,6 +89,7 @@ namespace cSharpSumFactorialFibonnaci
 
         public bool IsPrime(int n)
         {
+            if (n == 1) return false;
             for (int i = 2; i <= n / 2; i++)
             {
                 if (n % i == 0)
@@ -108,6 +109,12 @@ namespace cSharpSumFactorialFibonnaci
             TxtFibonacci.Text = "";
             TxtFactorial.Text = "";
             TxtPrime.Text = "";
+        }
+
+        private void TxtLen_DoubleClick(object sender, EventArgs e)
+        {
+            TxtLen.Text = (int.Parse(TxtLen.Text) + 1).ToString();
+            BtnCalculate.PerformClick();
         }
     }
 }
