@@ -101,7 +101,6 @@ namespace cSharpSumFactorialFibonnaci
             return true;
         }
 
-
         private void TxtLen_TextChanged(object sender, EventArgs e)
         {
             CbxFibonnaci.Items.Clear();
