@@ -184,10 +184,10 @@
             // TxtPrime
             // 
             this.TxtPrime.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TxtPrime.Location = new System.Drawing.Point(49, 329);
+            this.TxtPrime.Location = new System.Drawing.Point(11, 329);
             this.TxtPrime.Name = "TxtPrime";
             this.TxtPrime.ReadOnly = true;
-            this.TxtPrime.Size = new System.Drawing.Size(125, 31);
+            this.TxtPrime.Size = new System.Drawing.Size(200, 31);
             this.TxtPrime.TabIndex = 26;
             this.TxtPrime.Text = "Prime - ???";
             this.TxtPrime.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
